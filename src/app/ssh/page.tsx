@@ -165,7 +165,7 @@ export default function SSHPage() {
 
   // Stable WebSocket connection
   const { websocket, closeWithTrace } = useStableWebSocket(
-    'wss://voicememo-ws.bird89.com',
+    process.env.NEXT_PUBLIC_WS_URL || '',
     handlersConfig
   );
 
